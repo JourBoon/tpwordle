@@ -8,6 +8,7 @@ type RowProps = {
 };
 
 export function Row({ word, statuses }: RowProps) {
+<<<<<<< HEAD
   const letters = word.padEnd(5, " ").split("");
 
   return (
@@ -22,3 +23,17 @@ export function Row({ word, statuses }: RowProps) {
     </div>
   );
 }
+=======
+    return (
+        <div>
+            {word.split("").map((letter, index) => (
+                <Letter 
+                key={index} 
+                letter={letter} 
+                status={statuses[index]} 
+                />    
+            ))}
+        </div>
+    );
+}
+>>>>>>> 309d9cf (regle)
