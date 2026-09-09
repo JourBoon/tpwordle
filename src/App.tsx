@@ -64,6 +64,20 @@ function App() {
         currentGuess={currentGuess}
         secretWord={SECRET_WORD}
       />
+
+      {gameStatus === "win" && (
+        <div className="end-message">
+          <h2>Victoire !</h2>
+          <p>Bravo, tu as trouvé le mot.</p>
+        </div>
+      )}
+
+      {gameStatus === "lose" && (
+        <div className="end-message">
+          <h2>Perdu !</h2>
+          <p>Le mot était {SECRET_WORD}.</p>
+        </div>
+      )}
     </>
   );
 }
