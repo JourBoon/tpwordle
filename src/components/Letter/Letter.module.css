@@ -1,0 +1,26 @@
+.empty,
+.correct,
+.present,
+.absent {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  font-size: 2rem;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.correct {
+  background-color: green;
+}
+
+.present {
+  background-color: orange;
+}
+
+.absent {
+  background-color: gray;
+}
