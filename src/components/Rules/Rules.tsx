@@ -1,23 +1,22 @@
 import { useState } from "react";
+import styles from "./Rules.module.css";
 
 function Rules() {
     const [showRules, setShowRules] = useState(false);
 
     return (
         <>
-            <button
-                className="rules-button"
-                onClick={() => setShowRules(true)}
-            >
-                Règles
+            <button className={styles["rules-button"]}
+                    onClick={() => setShowRules(true)}>
+            Règles
             </button>
 
             {showRules && (
-                <div className="rules-overlay">
-                    <div className="rules-window">
+                <div className={styles["rules-overlay"]}>
+                    <div className={styles["rules-window"]}>
 
                         <button
-                            className="close-button"
+                            className={styles["close-button"]}
                             onClick={() => setShowRules(false)}
                         >
                             ×

@@ -2,25 +2,34 @@
 .correct,
 .present,
 .absent {
-  width: 60px;
-  height: 60px;
+  width: 62px;
+  height: 62px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #ccc;
+
+  border: 2px solid #3a3a3c;
+  border-radius: 4px;
+
   font-size: 2rem;
-  font-weight: bold;
-  box-sizing: border-box;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  transition: transform 0.15s ease;
 }
 
 .correct {
-  background-color: green;
+  background-color: #538d4e;
+  border-color: #538d4e;
 }
 
 .present {
-  background-color: orange;
+  background-color: #b59f3b;
+  border-color: #b59f3b;
 }
 
 .absent {
-  background-color: gray;
+  background-color: #3a3a3c;
+  border-color: #3a3a3c;
 }

@@ -1,6 +1,7 @@
 import { Row } from '../Row/Row';
 import type { LetterStatus } from "../../types/game";
 import { checkGuess } from '../../utils/checkGuess';
+import styles from "./GameBoard.module.css";
 
 type GameBoardProps = {
     guesses: string[];
@@ -12,7 +13,7 @@ export function GameBoard({ guesses, currentGuess, secretWord }: GameBoardProps)
   const rows = Array(6).fill("");
 
   return (
-    <div>
+    <div className={styles.board}>
       {rows.map((_, index) => {
         let word = guesses[index] ?? "";
         let statuses: LetterStatus[] = [
