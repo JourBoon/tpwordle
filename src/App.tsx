@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { SECRET_WORD } from "./data/words";
 import { GameBoard } from "./components/GameBoard/GameBoard";
+import Rules from "./components/Rules/Rules";
 
 type GameStatus = "playing" | "win" | "lose";
-=======
-import { Row } from './components/Row/Row';
-import Rules from "./components/Rules/Rules";
->>>>>>> 309d9cf (regle)
 
 function App() {
   const [guesses, setGuesses] = useState<string[]>([]);
@@ -59,8 +55,8 @@ function App() {
   }, [currentGuess, guesses]);
 
   return (
-<<<<<<< HEAD
-    <div>
+    <>
+      <Rules />
       <p>Mot actuel : {currentGuess}</p>
 
       <GameBoard 
@@ -68,17 +64,7 @@ function App() {
         currentGuess={currentGuess}
         secretWord={SECRET_WORD}
       />
-    </div>
-=======
-    <>
-      <Rules />
-
-      <Row
-        word="PARIS"
-        statuses={["correct", "present", "absent", "correct", "empty"]}
-      />
     </>
->>>>>>> 309d9cf (regle)
   );
 }
 
